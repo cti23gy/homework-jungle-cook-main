@@ -1,0 +1,414 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html,
+body {
+  height: 100%; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px; }
+
+.app {
+  min-height: 100vh;
+  position: relative; }
+
+@font-face {
+  font-family: CRegular;
+  src: url(../fonts/Caveat-Regular.ttf); }
+
+@font-face {
+  font-family: CBold;
+  src: url(../fonts/Caveat-Bold.ttf); }
+
+@font-face {
+  font-family: GillLight;
+  src: url(../fonts/GillSans-Light.ttf); }
+
+@font-face {
+  font-family: Gill;
+  src: url(../fonts/GillSans.ttf); }
+
+@font-face {
+  font-family: GillItalic;
+  src: url(../fonts/GillSans-Italic.ttf); }
+
+@font-face {
+  font-family: LatoBlack;
+  src: url(../fonts/Lato-Black.ttf); }
+
+@font-face {
+  font-family: Lato;
+  src: url(../fonts/Lato-Regular.ttf); }
+
+@font-face {
+  font-family: LatoItalic;
+  src: url(../fonts/Lato-Italic.ttf); }
+
+.link-nav {
+  display: flex;
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  width: 710px;
+  height: 50px;
+  justify-content: center;
+  align-items: center;
+  font-family: CRegular;
+  font-size: 25px; }
+  .link-nav a {
+    margin-left: 50px; }
+  .link-nav .login {
+    text-align: center;
+    padding-top: 8px;
+    width: 160px;
+    height: 50px;
+    background-color: #ffd972;
+    box-shadow: 0px 5px 5px #444;
+    border-radius: 50px; }
+
+nav {
+  display: none;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 100px;
+  height: 50px; }
+  nav .fas {
+    text-decoration: none; }
+
+.link-nav a {
+  text-decoration: none; }
+
+@media only screen and (max-width: 768px) {
+  .link-nav {
+    display: none; }
+  nav {
+    display: block;
+    right: 50px; } }
+
+.logo {
+  display: block;
+  position: fixed;
+  top: 50px;
+  left: 50px;
+  width: 200px;
+  height: 50px;
+  font-family: CRegular;
+  font-size: 26px; }
+  .logo p {
+    top: 10px;
+    position: absolute;
+    z-index: 99; }
+  .logo .circle1 {
+    width: 32px;
+    height: 32px;
+    background-color: #c7eae4;
+    border-radius: 32px;
+    position: absolute;
+    z-index: 0; }
+  .logo .circle2 {
+    width: 30px;
+    height: 30px;
+    background-color: #ffd972;
+    border-radius: 30px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 20px;
+    margin-top: 16px; }
+  .logo .circle3 {
+    width: 54px;
+    height: 54px;
+    background-color: #a7e8bd;
+    border-radius: 54px;
+    position: absolute;
+    z-index: 2;
+    margin-left: 46px;
+    margin-top: 0px; }
+  .logo .circle4 {
+    width: 24px;
+    height: 24px;
+    background-color: #fcbcb8;
+    border-radius: 24px;
+    position: absolute;
+    z-index: 3;
+    margin-left: 110px;
+    margin-top: 20px; }
+
+#menuToggle {
+  display: block;
+  position: relative;
+  top: 50px;
+  left: 50px;
+  z-index: 1;
+  -webkit-user-select: none;
+  user-select: none; }
+
+#menuToggle a {
+  text-decoration: none;
+  color: #232323;
+  transition: color 0.3s ease; }
+
+#menuToggle a:hover {
+  color: tomato; }
+
+#menuToggle input {
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  cursor: pointer;
+  opacity: 0;
+  /* hide this */
+  z-index: 99;
+  /* and place it over the hamburger */
+  -webkit-touch-callout: none; }
+
+/*
+ * Just a quick hamburger
+ */
+#menuToggle span {
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  background: #cdcdcd;
+  border-radius: 3px;
+  z-index: 2;
+  transform-origin: 4px 0px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease; }
+
+#menuToggle span:first-child {
+  transform-origin: 0% 0%; }
+
+#menuToggle span:nth-last-child(2) {
+  transform-origin: 0% 100%; }
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span {
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323; }
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2); }
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2) {
+  transform: rotate(-45deg) translate(0, -1px); }
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu {
+  z-index: 1;
+  position: absolute;
+  width: 200px;
+  margin: -100px 0 0 -50px;
+  padding: 50px;
+  padding-top: 125px;
+  background: rgba(242, 92, 84, 0.6);
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  transform-origin: 0% 0%;
+  transform: translate(0, -100%);
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1); }
+
+#menu a {
+  padding: 10px 0;
+  font-size: 22px;
+  font-family: GillItalic; }
+
+/*
+ * And let's slide it in from the left
+ */
+#menuToggle input:checked ~ ul {
+  transform: none; }
+
+.home {
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(242, 92, 84, 0.6), rgba(242, 92, 84, 0.6)), url(../images/hero.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .home .circle-holder {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding-top: 100px; }
+    .home .circle-holder .small-circle {
+      width: 170px;
+      height: 170px;
+      background-color: #fcbcb8;
+      border-radius: 170px;
+      position: absolute;
+      z-index: 0;
+      margin-left: 360px;
+      margin-top: -270px;
+      display: flex;
+      align-items: center;
+      justify-content: center; }
+      .home .circle-holder .small-circle p {
+        text-align: center;
+        width: 105px;
+        font-size: 11px;
+        font-family: LatoItalic; }
+    .home .circle-holder .big-circle {
+      width: 360px;
+      height: 360px;
+      background-color: #ffd972;
+      border-radius: 360px;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center; }
+      .home .circle-holder .big-circle h1 {
+        font-size: 30px;
+        font-family: CBold; }
+      .home .circle-holder .big-circle p {
+        width: 160px;
+        font-size: 16px;
+        font-family: Lato; }
+
+@media only screen and (max-width: 768px) {
+  .home .circle-holder .small-circle {
+    margin-left: 240px;
+    margin-top: -380px; } }
+
+.loginpage {
+  height: 100vh;
+  width: 100%;
+  background-color: #ffd972;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .loginpage h1 {
+    font-family: LatoBlack;
+    font-size: 30px; }
+  .loginpage h4 {
+    font-family: LatoItalic;
+    font-size: 12px; }
+  .loginpage input {
+    border: none;
+    background: transparent;
+    border-bottom-width: 2px;
+    border-bottom: black;
+    margin-top: 50px; }
+  .loginpage .line {
+    background-color: #000;
+    height: 3px;
+    width: 100%; }
+  .loginpage section {
+    width: 740px;
+    min-height: 500px;
+    display: flex;
+    justify-content: space-between; }
+    .loginpage section .login-here {
+      margin-top: 160px;
+      width: 210px;
+      height: 420px; }
+    .loginpage section .sign-up-here {
+      margin-top: 60px;
+      width: 250px;
+      height: 500px; }
+    .loginpage section .login {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 50px;
+      padding-top: 8px;
+      width: 100%;
+      height: 50px;
+      background-color: #ffd972;
+      box-shadow: 0px 5px 5px #444;
+      border-radius: 50px;
+      font-family: CRegular;
+      font-size: 25px; }
+    .loginpage section a {
+      text-decoration: none; }
+
+@media only screen and (max-width: 768px) {
+  .loginpage {
+    height: 1200px; }
+    .loginpage section {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center; }
+      .loginpage section .login-here {
+        margin-top: 0; }
+      .loginpage section .sign-up-here {
+        margin-top: 0; } }
+
+footer {
+  bottom: 40px;
+  display: flex;
+  position: absolute;
+  font-family: LatoItalic;
+  font-size: 15px; }
+  footer .footer-info {
+    margin-left: 100px; }
+  footer .footer-nav {
+    display: flex;
+    align-items: center;
+    margin: 0 120px; }
+  footer .footer-logo {
+    margin: 10px 50px;
+    display: flex; }
+    footer .footer-logo .fab {
+      margin-left: 50px; }
+  footer p {
+    align-items: center;
+    margin: 16px 10px; }
+  footer a {
+    text-decoration: none;
+    align-items: center;
+    margin: 0 16px; }
+
+@media only screen and (max-width: 768px) {
+  footer {
+    font-size: 10px; }
+    footer .footer-info {
+      margin-left: 20px; }
+    footer .footer-nav {
+      margin: 0 0px; }
+    footer .footer-logo {
+      margin: 10px 20px; }
+      footer .footer-logo .fab {
+        right: 0px;
+        margin-left: 20px; }
+    footer p {
+      margin: 16px 10px; }
+    footer a {
+      margin: 0 10px; } }

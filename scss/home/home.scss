@@ -1,0 +1,88 @@
+.home {
+  height: 100vh;
+  width: 100%;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      to right,
+      rgba($site-red, 0.6),
+      rgba($site-red, 0.6)
+    ),
+    url(../images/hero.jpg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .circle-holder {
+    width: 400px;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+
+    padding-top: 100px;
+
+    .small-circle {
+      width: 170px;
+      height: 170px;
+      background-color: $site-lite-pink;
+      border-radius: 170px;
+
+      position: absolute;
+      z-index: 0;
+
+      margin-left: 360px;
+      margin-top: -270px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      p {
+        text-align: center;
+        width: 105px;
+        font-size: 11px;
+        font-family: LatoItalic;
+      }
+    }
+    .big-circle {
+      width: 360px;
+      height: 360px;
+      background-color: $site-yellow;
+      border-radius: 360px;
+
+      z-index: 1;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+
+      h1 {
+        font-size: 30px;
+        font-family: CBold;
+      }
+
+      p {
+        width: 160px;
+        font-size: 16px;
+        font-family: Lato;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    .circle-holder {
+      .small-circle {
+        margin-left: 240px;
+        margin-top: -380px;
+      }
+    }
+  }
+}
