@@ -8,8 +8,9 @@
 <nav class="link-nav">
   <a href="#/home">Home</a>
   <a href="#">Browse</a>
-  <a href="#">Create Recipes</a>
-  <a class="login" href="#/loginpage">Login</a>
+  <a class="recipe_option" href="#">Create Recipes</a>
+  <a class="navlogin" href="#/loginpage">Login</a>
+  <a class="navsignout" href="#/signoutfire">Sign Out</a>
 </nav>
 
 <nav role="navigation">
@@ -23,8 +24,9 @@
     <ul id="menu">
       <a href="#/home">Home</a>
       <a href="#">Browse</a>
-      <a href="#">Create Recipes</a>
-      <a class="login" href="#/loginpage">Login</a>
+      <a class="recipe_option" href="#">Create Recipes</a>
+      <a class="navlogin" href="#/loginpage">Login</a>
+      <a class="navsignout" href="#/signoutfire">Sign Out</a>
     </ul>
   </div>
 </nav>
@@ -33,24 +35,24 @@
   <section>
     <div class="login-here">
       <h1>Login Here!</h1>
-      <input type="text" placeholder="Email Address" />
+      <input type="text" placeholder="Email Address" id="l_email" />
       <div class="line"></div>
-      <input type="text" placeholder="Password" />
+      <input type="text" placeholder="Password" id="l_password" />
       <div class="line"></div>
-      <button type="submit" class="login">Login</button>
+      <a type="submit" class="login" href="#/loginfire">Login</a>
     </div>
     <div class="sign-up-here">
       <h4>don’t have an account?</h4>
       <h1>Sign Up!</h1>
-      <input type="text" placeholder="First Name" />
+      <input type="text" placeholder="First Name" id="c_firstname" />
       <div class="line"></div>
-      <input type="text" placeholder="Last Name" />
+      <input type="text" placeholder="Last Name" id="c_lastname" />
       <div class="line"></div>
-      <input type="text" placeholder="Email Address" />
+      <input type="text" placeholder="Email Address" id="c_email" />
       <div class="line"></div>
-      <input type="text" placeholder="Password" />
+      <input type="text" placeholder="Password" id="c_password" />
       <div class="line"></div>
-      <button type="submit" class="login">Sign Up</button>
+      <a type="submit" class="login" href="#/signupfire">Sign Up</a>
     </div>
   </section>
 </div>
@@ -64,8 +66,8 @@
     <a href="#/loginpage">Login</a>
     <a href="#">Recipes by Category</a>
     <a href="#">Privacy and Copyright</a>
-    <a href="#">Create Recipe</a>
-    <a href="#">Your Recipes</a>
+    <a class="recipe_option" href="#">Create Recipe</a>
+    <a class="recipe_option" href="#">Your Recipes</a>
   </div>
 
   <div class="footer-logo">

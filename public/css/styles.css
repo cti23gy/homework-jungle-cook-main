@@ -65,7 +65,17 @@ p {
   font-size: 25px; }
   .link-nav a {
     margin-left: 50px; }
-  .link-nav .login {
+  .link-nav .navlogin {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    width: 160px;
+    height: 50px;
+    background-color: #ffd972;
+    box-shadow: 0px 5px 5px #444;
+    border-radius: 50px; }
+  .link-nav .navsignout {
+    display: none;
     text-align: center;
     padding-top: 8px;
     width: 160px;
@@ -86,6 +96,15 @@ nav {
 
 .link-nav a {
   text-decoration: none; }
+
+#menu .navlogin {
+  display: block; }
+
+#menu .navsignout {
+  display: none; }
+
+.recipe_option {
+  display: none; }
 
 @media only screen and (max-width: 768px) {
   .link-nav {

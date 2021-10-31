@@ -17,7 +17,19 @@
     margin-left: 50px;
   }
 
-  .login {
+  .navlogin {
+    display: block;
+    text-align: center;
+    padding-top: 8px;
+    width: 160px;
+    height: 50px;
+    background-color: $site-yellow;
+    box-shadow: 0px 5px 5px #444;
+    border-radius: 50px;
+  }
+
+  .navsignout {
+    display: none;
     text-align: center;
     padding-top: 8px;
     width: 160px;
@@ -44,6 +56,20 @@ nav {
 
 .link-nav a {
   text-decoration: none;
+}
+
+#menu {
+  .navlogin {
+    display: block;
+  }
+  .navsignout {
+    display: none;
+  }
+}
+
+//applies to every recipe option not just nav
+.recipe_option {
+  display: none;
 }
 
 @media only screen and (max-width: 768px) {
