@@ -41,6 +41,7 @@
 }
 
 nav {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0px;
@@ -56,6 +57,11 @@ nav {
 
 .link-nav a {
   text-decoration: none;
+  .line {
+    background-color: #000;
+    width: 100%;
+    height: 2px;
+  }
 }
 
 #menu {
@@ -70,6 +76,17 @@ nav {
 //applies to every recipe option not just nav
 .recipe_option {
   display: none;
+}
+
+//prevent text overlap when scrolling
+.banner {
+  background-color: #fff;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1;
 }
 
 @media only screen and (max-width: 768px) {

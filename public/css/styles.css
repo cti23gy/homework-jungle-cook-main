@@ -85,6 +85,7 @@ p {
     border-radius: 50px; }
 
 nav {
+  z-index: 2;
   display: none;
   position: fixed;
   top: 0px;
@@ -96,6 +97,10 @@ nav {
 
 .link-nav a {
   text-decoration: none; }
+  .link-nav a .line {
+    background-color: #000;
+    width: 100%;
+    height: 2px; }
 
 #menu .navlogin {
   display: block; }
@@ -106,6 +111,15 @@ nav {
 .recipe_option {
   display: none; }
 
+.banner {
+  background-color: #fff;
+  width: 100%;
+  height: 120px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 1; }
+
 @media only screen and (max-width: 768px) {
   .link-nav {
     display: none; }
@@ -114,6 +128,7 @@ nav {
     right: 50px; } }
 
 .logo {
+  z-index: 2;
   display: block;
   position: fixed;
   top: 50px;
@@ -390,23 +405,468 @@ nav {
       .loginpage section .sign-up-here {
         margin-top: 0; } }
 
+.browse {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .browse h1 {
+    padding-top: 160px;
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: CBold;
+    font-size: 25px; }
+  .browse #recipe {
+    display: flex;
+    width: 80%;
+    min-height: 700px;
+    margin: 0 auto 160px auto;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .browse #recipe .recipeblock {
+      display: flex;
+      padding-top: 50px; }
+    .browse #recipe .image {
+      height: 260px;
+      width: 300px;
+      border-radius: 30px;
+      background-color: brown; }
+    .browse #recipe .view_button {
+      width: 125px;
+      height: 40px;
+      background-color: #ffd972;
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 90px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none; }
+    .browse #recipe .content {
+      height: 260px;
+      width: 220px;
+      border-radius: 30px;
+      background-color: #fff;
+      padding: 40px; }
+      .browse #recipe .content h3 {
+        font-size: 15px;
+        font-family: LatoBlack; }
+      .browse #recipe .content p {
+        font-size: 9px;
+        font-family: Lato; }
+      .browse #recipe .content h4 {
+        font-size: 10px;
+        font-family: Lato; }
+      .browse #recipe .content .line {
+        height: 2px;
+        width: 130px;
+        background-color: #000;
+        margin-top: -16px;
+        margin-bottom: 10px; }
+      .browse #recipe .content .content-ex {
+        display: flex;
+        justify-content: center; }
+      .browse #recipe .content .icon-timer {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px; }
+      .browse #recipe .content .icon-serving {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px; }
+
+.createrecipe {
+  z-index: 0;
+  min-height: 100vh;
+  width: 100%;
+  margin: 160px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .createrecipe h1 {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: CBold;
+    font-size: 25px; }
+  .createrecipe h2 {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: Lato;
+    font-size: 20px;
+    margin-top: 100px; }
+  .createrecipe .newrecipe {
+    min-height: 300px;
+    width: 100%;
+    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .createrecipe .newrecipe input {
+      height: 30px;
+      width: 80%;
+      border: none;
+      background: transparent;
+      border-bottom-width: 2px;
+      border-bottom: black;
+      margin-top: 50px; }
+    .createrecipe .newrecipe .line {
+      background-color: #000;
+      height: 3px;
+      width: 80%; }
+    .createrecipe .newrecipe .form1 {
+      width: 80%;
+      position: relative; }
+      .createrecipe .newrecipe .form1 .line {
+        background-color: #000;
+        height: 3px;
+        width: 100%; }
+    .createrecipe .newrecipe .form1 input {
+      height: 30px;
+      width: 80%; }
+    .createrecipe .newrecipe .form2 {
+      width: 80%;
+      position: relative; }
+      .createrecipe .newrecipe .form2 .line {
+        background-color: #000;
+        height: 3px;
+        width: 100%; }
+    .createrecipe .newrecipe .form2 input {
+      height: 30px;
+      width: 80%; }
+    .createrecipe .newrecipe .btn {
+      background-color: #efa7a7;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-family: GillLight;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      /* absolute reflects parent while fixed reflects the whole browser */
+      bottom: 0;
+      right: 0; }
+    .createrecipe .newrecipe .confirm-btn {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 50px;
+      padding-top: 8px;
+      width: 420px;
+      height: 50px;
+      background-color: #ffd972;
+      box-shadow: 0px 5px 5px #444;
+      border-radius: 50px;
+      font-family: CRegular;
+      font-size: 25px;
+      text-decoration: none; }
+
+.yourrecipe {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(to right, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../images/recipe-hero.jpg);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .yourrecipe h1 {
+    padding-top: 160px;
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: CBold;
+    font-size: 25px; }
+  .yourrecipe #recipe {
+    display: flex;
+    width: 80%;
+    min-height: 700px;
+    margin: 0 auto 160px auto;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .yourrecipe #recipe .recipeblock {
+      display: flex;
+      padding-top: 100px; }
+    .yourrecipe #recipe .image {
+      height: 260px;
+      width: 300px;
+      border-radius: 30px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: linear-gradient(to right, rgba(167, 232, 189, 0.6), rgba(167, 232, 189, 0.6)), url(../public/images/logo.svg); }
+    .yourrecipe #recipe .view_button {
+      width: 125px;
+      height: 40px;
+      background-color: #ffd972;
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 90px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none; }
+    .yourrecipe #recipe .edit_button {
+      width: 125px;
+      height: 40px;
+      background-color: #ffd972;
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 20px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none; }
+    .yourrecipe #recipe .delete_button {
+      width: 125px;
+      height: 40px;
+      background-color: #ffd972;
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 160px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none; }
+    .yourrecipe #recipe .content {
+      height: 260px;
+      width: 220px;
+      border-radius: 30px;
+      background-color: #fff;
+      padding: 40px; }
+      .yourrecipe #recipe .content h3 {
+        font-size: 15px;
+        font-family: LatoBlack; }
+      .yourrecipe #recipe .content p {
+        font-size: 9px;
+        font-family: Lato; }
+      .yourrecipe #recipe .content h4 {
+        font-size: 10px;
+        font-family: Lato; }
+      .yourrecipe #recipe .content .line {
+        height: 2px;
+        width: 130px;
+        background-color: #000;
+        margin-top: -16px;
+        margin-bottom: 10px; }
+      .yourrecipe #recipe .content .content-ex {
+        display: flex;
+        justify-content: center; }
+      .yourrecipe #recipe .content .icon-timer {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px; }
+      .yourrecipe #recipe .content .icon-serving {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px; }
+
+.editrecipe {
+  z-index: 0;
+  min-height: 100vh;
+  width: 100%;
+  margin: 160px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; }
+  .editrecipe h1 {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: CBold;
+    font-size: 25px; }
+  .editrecipe h2 {
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: Lato;
+    font-size: 20px;
+    margin-top: 100px; }
+  .editrecipe .newrecipe {
+    min-height: 300px;
+    width: 100%;
+    padding-bottom: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; }
+    .editrecipe .newrecipe input {
+      height: 30px;
+      width: 80%;
+      border: none;
+      background: transparent;
+      border-bottom-width: 2px;
+      border-bottom: black;
+      margin-top: 50px; }
+    .editrecipe .newrecipe .line {
+      background-color: #000;
+      height: 3px;
+      width: 80%; }
+    .editrecipe .newrecipe .form1 {
+      width: 80%;
+      position: relative; }
+      .editrecipe .newrecipe .form1 .line {
+        background-color: #000;
+        height: 3px;
+        width: 100%; }
+    .editrecipe .newrecipe .form1 input {
+      height: 30px;
+      width: 80%; }
+    .editrecipe .newrecipe .form2 {
+      width: 80%;
+      position: relative; }
+      .editrecipe .newrecipe .form2 .line {
+        background-color: #000;
+        height: 3px;
+        width: 100%; }
+    .editrecipe .newrecipe .form2 input {
+      height: 30px;
+      width: 80%; }
+    .editrecipe .newrecipe .btn {
+      background-color: #efa7a7;
+      width: 50px;
+      height: 50px;
+      border-radius: 25px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      font-family: GillLight;
+      color: #fff;
+      cursor: pointer;
+      position: absolute;
+      /* absolute reflects parent while fixed reflects the whole browser */
+      bottom: 0;
+      right: 0; }
+    .editrecipe .newrecipe .confirm-btn {
+      display: flex;
+      justify-content: center;
+      align-self: center;
+      margin-top: 50px;
+      padding-top: 8px;
+      width: 420px;
+      height: 50px;
+      background-color: #efa7a7;
+      box-shadow: 0px 5px 5px #444;
+      border-radius: 50px;
+      font-family: CRegular;
+      font-size: 25px;
+      text-decoration: none; }
+
+.viewrecipe {
+  z-index: 0;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto; }
+  .viewrecipe #viewwindow {
+    display: flex;
+    width: 100%;
+    margin: 0 auto 160px auto;
+    flex-flow: row wrap;
+    justify-content: space-around; }
+    .viewrecipe #viewwindow h2 {
+      position: absolute;
+      margin-left: -40px;
+      margin-top: 460px;
+      transform: rotate(-90deg);
+      transform-origin: top left;
+      font-size: 25px;
+      font-family: LatoBlack; }
+    .viewrecipe #viewwindow h3 {
+      font-size: 25px;
+      font-family: LatoBlack; }
+    .viewrecipe #viewwindow p {
+      font-size: 20px;
+      font-family: CRegular; }
+    .viewrecipe #viewwindow .recipeblock {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      padding-top: 160px;
+      margin: auto 200px; }
+      .viewrecipe #viewwindow .recipeblock .image {
+        height: 470px;
+        width: 420px;
+        background-color: brown;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center; }
+      .viewrecipe #viewwindow .recipeblock .content {
+        height: 600px;
+        width: 440px;
+        padding: 40px; }
+    .viewrecipe #viewwindow .listcontent {
+      width: 100%;
+      min-height: 400px;
+      margin-bottom: 160px;
+      padding-left: 12%;
+      margin-right: 40px; }
+      .viewrecipe #viewwindow .listcontent .edit_button {
+        width: 130px;
+        height: 40px;
+        border-radius: 20px;
+        background-color: #ffd972;
+        text-decoration: none;
+        font-size: 20px;
+        font-family: CRegular; }
+
 footer {
+  width: 100%;
   bottom: 40px;
   display: flex;
   position: absolute;
   font-family: LatoItalic;
   font-size: 15px; }
   footer .footer-info {
-    margin-left: 100px; }
+    float: left;
+    padding-left: 40px; }
   footer .footer-nav {
     display: flex;
     align-items: center;
-    margin: 0 120px; }
+    justify-content: center;
+    margin: 0 auto; }
   footer .footer-logo {
-    margin: 10px 50px;
+    float: right;
+    padding-right: 40px;
+    margin: 10px 0;
     display: flex; }
-    footer .footer-logo .fab {
-      margin-left: 50px; }
+    footer .footer-logo .footer-logo1 {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/facebook.svg); }
+    footer .footer-logo .spacer {
+      min-width: 40px; }
+    footer .footer-logo .footer-logo2 {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/instagram.svg); }
   footer p {
     align-items: center;
     margin: 16px 10px; }
@@ -419,14 +879,9 @@ footer {
   footer {
     font-size: 10px; }
     footer .footer-info {
-      margin-left: 20px; }
-    footer .footer-nav {
-      margin: 0 0px; }
-    footer .footer-logo {
-      margin: 10px 20px; }
-      footer .footer-logo .fab {
-        right: 0px;
-        margin-left: 20px; }
+      padding-left: 20px; }
+    footer .footer-logo .spacer {
+      min-width: 30px; }
     footer p {
       margin: 16px 10px; }
     footer a {

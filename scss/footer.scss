@@ -1,4 +1,5 @@
 footer {
+  width: 100%;
   bottom: 40px;
   display: flex;
   position: absolute;
@@ -7,20 +8,42 @@ footer {
   font-size: 15px;
 
   .footer-info {
-    margin-left: 100px;
+    float: left;
+    padding-left: 40px;
   }
 
   .footer-nav {
     display: flex;
     align-items: center;
-    margin: 0 120px;
+    justify-content: center;
+    margin: 0 auto;
   }
 
   .footer-logo {
-    margin: 10px 50px;
+    float: right;
+    padding-right: 40px;
+    margin: 10px 0;
     display: flex;
-    .fab {
-      margin-left: 50px;
+
+    .footer-logo1 {
+      width: 20px;
+      height: 20px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/facebook.svg);
+    }
+    .spacer {
+      min-width: 40px;
+    }
+    .footer-logo2 {
+      width: 20px;
+      height: 20px;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: url(../images/instagram.svg);
     }
   }
 
@@ -40,18 +63,15 @@ footer {
     font-size: 10px;
 
     .footer-info {
-      margin-left: 20px;
+      padding-left: 20px;
     }
 
     .footer-nav {
-      margin: 0 0px;
     }
 
     .footer-logo {
-      margin: 10px 20px;
-      .fab {
-        right: 0px;
-        margin-left: 20px;
+      .spacer {
+        min-width: 30px;
       }
     }
     p {

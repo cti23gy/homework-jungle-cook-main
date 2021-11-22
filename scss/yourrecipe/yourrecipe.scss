@@ -1,0 +1,155 @@
+.yourrecipe {
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-image: linear-gradient(
+      to right,
+      rgba($site-green, 0.6),
+      rgba($site-green, 0.6)
+    ),
+    url(../images/recipe-hero.jpg);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    padding-top: 160px;
+    align-self: flex-start;
+    padding-left: 10%;
+    font-family: CBold;
+    font-size: 25px;
+  }
+
+  #recipe {
+    display: flex;
+    width: 80%;
+    min-height: 700px;
+    //background-color: yellowgreen;
+    margin: 0 auto 160px auto;
+
+    flex-flow: row wrap;
+    justify-content: space-around;
+
+    .recipeblock {
+      display: flex;
+      padding-top: 100px;
+    }
+
+    .image {
+      height: 260px;
+      width: 300px;
+      border-radius: 30px;
+
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-image: linear-gradient(
+          to right,
+          rgba($site-green, 0.6),
+          rgba($site-green, 0.6)
+        ),
+        url(../public/images/logo.svg);
+    }
+
+    .view_button {
+      width: 125px;
+      height: 40px;
+      background-color: $site-yellow;
+      position: absolute;
+      margin-top: 100px;
+      margin-left: 90px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none;
+    }
+
+    .edit_button {
+      width: 125px;
+      height: 40px;
+      background-color: $site-yellow;
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 20px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none;
+    }
+
+    .delete_button {
+      width: 125px;
+      height: 40px;
+      background-color: $site-yellow;
+      position: absolute;
+      margin-top: 200px;
+      margin-left: 160px;
+      text-align: center;
+      padding-top: 8px;
+      border-radius: 20px;
+
+      font-size: 20px;
+      font-family: CRegular;
+      text-decoration: none;
+    }
+
+    .content {
+      height: 260px;
+      width: 220px;
+      border-radius: 30px;
+
+      background-color: #fff;
+      padding: 40px;
+
+      h3 {
+        font-size: 15px;
+        font-family: LatoBlack;
+      }
+
+      p {
+        font-size: 9px;
+        font-family: Lato;
+      }
+
+      h4 {
+        font-size: 10px;
+        font-family: Lato;
+      }
+
+      .line {
+        height: 2px;
+        width: 130px;
+        background-color: #000;
+        margin-top: -16px;
+        margin-bottom: 10px;
+      }
+
+      .content-ex {
+        display: flex;
+        justify-content: center;
+      }
+      .icon-timer {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+      }
+      .icon-serving {
+        width: 23px;
+        height: 23px;
+        margin-right: 10px;
+      }
+    }
+  }
+}
